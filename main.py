@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-from seleniumrun import search
 from emptyfield import Validate_form
 from tabledata import tabledata
 app = Flask(__name__,template_folder='template')
