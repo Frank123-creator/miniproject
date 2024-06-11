@@ -37,8 +37,16 @@
         }
         .error-message {
         color: red;
-        
-    }
+        }
+        .headings{
+            color: red;
+            font-size: 20px;
+            font-family: impact;
+        }
+        .subheadings{
+            color:rgba(68, 67, 67, 0.895);
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -50,12 +58,12 @@
   <div class="search">
         <div>
     <label>PRODUCT1:</label>
-    <input type="text" name="search_query1" id="textbox1" placeholder="search1" size="50" >
+    <input type="text" name="search_query1" id="textbox1" placeholder="search1" size="50" value="realme 8 5g">
     <div><pre class="error-message">{{ error1 }}</pre></div>
         </div>
         <div>
     <label>PRODUCT2:</label>
-    <input type="text" name="search_query2" id="textbox2" placeholder="search2" size="50" >
+    <input type="text" name="search_query2" id="textbox2" placeholder="search2" size="50" value="realme narzo n65">
     <br><div><pre class="error-message">{{ error2 }}</pre></div>
         </div>
   </div><br><br>
@@ -64,15 +72,133 @@
         <button type="submit" class="button">COMPARE</button>
         <h1></h1>
         </div>
-    </form>
+</form>
     
-    {% for items1 in result1 %}
-        <h1>{{items1}}</h1><br>
-    {% endfor %}
+   
+    
+    {% if table_data %}
+    <table border="1" style="border-collapse: collapse;" width="97%" align="center">
+        <thead>
+            <td colspan="2"></td>
+            <td align="center" width="50%">
+                {% for row in table_data %}
+                <h1>{{row['data1']}}</h1><br>
+                {% endfor %} 
+            </td>
+            <td align="center" width="50%">
+                {% for row in table_data %}
+                <h1>{{row['data35']}}</h1><br>
+                {% endfor %}
+            </td>
+        </thead>
+        <tr>
+            <td align="center" class="headings" width="10%">NETWORK</td>
+            <td align="left" class="subheadings" width="10%">Technology</td>
+            {% for row in table_data %}
+            <td>{{row['data2']}}</td>
+            <td>{{row['data36']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">LAUNCH</td>
+            <td align="left" class="subheadings">Announced<br><br>Status</td>
+            {% for row in table_data %}
+            <td>{{row['data3']}}<br><br>{{row['data4']}}</td>
+            <td>{{row['data37']}}<br><br>{{row['data38']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">BODY</td>
+            <td align="left" class="subheadings">Dimensions<br>Weight<br>SIM</td>
+            {% for row in table_data %}
+            <td>{{row['data5']}}<br><br>{{row['data6']}}<br><br>{{row['data7']}}</td>
+            <td>{{row['data39']}}<br><br>{{row['data40']}}<br><br>{{row['data41']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">DISPLAY</td>
+            <td align="left" class="subheadings">Type<br><br>Size<br><br>Resolution</td>
+            {% for row in table_data %}
+            <td>{{row['data8']}}<br><br>{{row['data9']}}<br><br>{{row['data10']}}</td>
+            <td>{{row['data42']}}<br><br>{{row['data43']}}<br><br>{{row['data44']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">PLATFORM</td>
+            <td align="left" class="subheadings">OS<br><br>ChipSet<br><br>CPU<br><br>GPU</td>
+            {% for row in table_data %}
+            <td>{{row['data11']}}<br><br>{{row['data12']}}<br><br>{{row['data13']}}<br><br>{{row['data14']}}</td>
+            <td>{{row['data45']}}<br><br>{{row['data46']}}<br><br>{{row['data47']}}<br><br>{{row['data48']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">MEMORY</td>
+            <td align="left" class="subheadings">Card slot<br><br>Internal</td>
+            {% for row in table_data %}
+            <td>{{row['data15']}}<br><br>{{row['data16']}}</td>
+            <td>{{row['data49']}}<br><br>{{row['data50']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">MAIN<br>CAMERA</td>
+            <td align="left" class="subheadings">Single<br><br>Features<br><br>Video</td>
+            {% for row in table_data %}
+            <td>{{row['data17']}}<br><br>{{row['data18']}}<br><br>{{row['data19']}}</td>
+            <td>{{row['data51']}}<br><br>{{row['data52']}}<br><br>{{row['data53']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">SELFIE<br>CAMERA</td>
+            <td align="left" class="subheadings">Single<br><br>Features<br><br>Video</td>
+            {% for row in table_data %}
+            <td>{{row['data20']}}<br><br>{{row['data21']}}<br><br>{{row['data22']}}</td>
+            <td>{{row['data54']}}<br><br>{{row['data55']}}<br><br>{{row['data56']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">SOUND</td>
+            <td align="left" class="subheadings">LoudSpeaker<br><br>3.5mm jack</td>
+            {% for row in table_data %}
+            <td>{{row['data23']}}<br><br>{{row['data24']}}</td>
+            <td>{{row['data57']}}<br><br>{{row['data58']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">COMMS</td>
+            <td align="left" class="subheadings">WLAN<br><br>Blutooth<br><br>Positioning<br><br>NFC<br><br>Radio<br><br>USB</td>
+            {% for row in table_data %}
+            <td>{{row['data25']}}<br><br><br>{{row['data26']}}<br><br>{{row['data27']}}<br><br>{{row['data28']}}<br><br>{{row['data29']}}<br><br><br>{{row['data30']}}</td>
+            <td>{{row['data59']}}<br><br><br>{{row['data60']}}<br><br>{{row['data61']}}<br><br>{{row['data62']}}<br><br>{{row['data63']}}<br><br><br>{{row['data64']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">FEATURES</td>
+            <td align="left" class="subheadings">Sensors</td>
+            {% for row in table_data %}
+            <td>{{row['data31']}}</td>
+            <td>{{row['data65']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">BATTERY</td>
+            <td align="left" class="subheadings">Type<br><br>Charging</td>
+            {% for row in table_data %}
+            <td>{{row['data32']}}<br><br>{{row['data33']}}</td>
+            <td>{{row['data66']}}<br><br>{{row['data67']}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td align="center" class="headings">MISC</td>
+            <td align="left" class="subheadings">Colors</td>
+            {% for row in table_data %}
+            <td>{{row['data34']}}</td>
+            <td>{{row['data68']}}</td>
+            {% endfor %}
+        </tr>
+    </table> 
 
-    {% for items2 in result2 %}
-        <h1>{{items2}}</h1>
-    {% endfor %}
+{% endif %}
+    
   
 
 </body>
