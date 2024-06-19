@@ -77,8 +77,9 @@
    
     
     {% if table_data %}
-    <table border="1" style="border-collapse: collapse;" width="97%" align="center">
-        <thead>
+<table border="1" width="100%" style="border-collapse:collapse">
+    <!-- row1-->
+    <thead>
             <td colspan="2"></td>
             <td align="center" width="50%">
                 {% for row in table_data %}
@@ -90,114 +91,287 @@
                 <h1>{{row['data35']}}</h1><br>
                 {% endfor %}
             </td>
-        </thead>
-        <tr>
-            <td align="center" class="headings" width="10%">NETWORK</td>
-            <td align="left" class="subheadings" width="10%">Technology</td>
-            {% for row in table_data %}
-            <td>{{row['data2']}}</td>
-            <td>{{row['data36']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">LAUNCH</td>
-            <td align="left" class="subheadings">Announced<br><br>Status</td>
-            {% for row in table_data %}
-            <td>{{row['data3']}}<br><br>{{row['data4']}}</td>
-            <td>{{row['data37']}}<br><br>{{row['data38']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">BODY</td>
-            <td align="left" class="subheadings">Dimensions<br>Weight<br>SIM</td>
-            {% for row in table_data %}
-            <td>{{row['data5']}}<br><br>{{row['data6']}}<br><br>{{row['data7']}}</td>
-            <td>{{row['data39']}}<br><br>{{row['data40']}}<br><br>{{row['data41']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">DISPLAY</td>
-            <td align="left" class="subheadings">Type<br><br>Size<br><br>Resolution</td>
-            {% for row in table_data %}
-            <td>{{row['data8']}}<br><br>{{row['data9']}}<br><br>{{row['data10']}}</td>
-            <td>{{row['data42']}}<br><br>{{row['data43']}}<br><br>{{row['data44']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">PLATFORM</td>
-            <td align="left" class="subheadings">OS<br><br>ChipSet<br><br>CPU<br><br>GPU</td>
-            {% for row in table_data %}
-            <td>{{row['data11']}}<br><br>{{row['data12']}}<br><br>{{row['data13']}}<br><br>{{row['data14']}}</td>
-            <td>{{row['data45']}}<br><br>{{row['data46']}}<br><br>{{row['data47']}}<br><br>{{row['data48']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">MEMORY</td>
-            <td align="left" class="subheadings">Card slot<br><br>Internal</td>
-            {% for row in table_data %}
-            <td>{{row['data15']}}<br><br>{{row['data16']}}</td>
-            <td>{{row['data49']}}<br><br>{{row['data50']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">MAIN<br>CAMERA</td>
-            <td align="left" class="subheadings">Single<br><br>Features<br><br>Video</td>
-            {% for row in table_data %}
-            <td>{{row['data17']}}<br><br>{{row['data18']}}<br><br>{{row['data19']}}</td>
-            <td>{{row['data51']}}<br><br>{{row['data52']}}<br><br>{{row['data53']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">SELFIE<br>CAMERA</td>
-            <td align="left" class="subheadings">Single<br><br>Features<br><br>Video</td>
-            {% for row in table_data %}
-            <td>{{row['data20']}}<br><br>{{row['data21']}}<br><br>{{row['data22']}}</td>
-            <td>{{row['data54']}}<br><br>{{row['data55']}}<br><br>{{row['data56']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">SOUND</td>
-            <td align="left" class="subheadings">LoudSpeaker<br><br>3.5mm jack</td>
-            {% for row in table_data %}
-            <td>{{row['data23']}}<br><br>{{row['data24']}}</td>
-            <td>{{row['data57']}}<br><br>{{row['data58']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">COMMS</td>
-            <td align="left" class="subheadings">WLAN<br><br>Blutooth<br><br>Positioning<br><br>NFC<br><br>Radio<br><br>USB</td>
-            {% for row in table_data %}
-            <td>{{row['data25']}}<br><br><br>{{row['data26']}}<br><br>{{row['data27']}}<br><br>{{row['data28']}}<br><br>{{row['data29']}}<br><br><br>{{row['data30']}}</td>
-            <td>{{row['data59']}}<br><br><br>{{row['data60']}}<br><br>{{row['data61']}}<br><br>{{row['data62']}}<br><br>{{row['data63']}}<br><br><br>{{row['data64']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">FEATURES</td>
-            <td align="left" class="subheadings">Sensors</td>
-            {% for row in table_data %}
-            <td>{{row['data31']}}</td>
-            <td>{{row['data65']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">BATTERY</td>
-            <td align="left" class="subheadings">Type<br><br>Charging</td>
-            {% for row in table_data %}
-            <td>{{row['data32']}}<br><br>{{row['data33']}}</td>
-            <td>{{row['data66']}}<br><br>{{row['data67']}}</td>
-            {% endfor %}
-        </tr>
-        <tr>
-            <td align="center" class="headings">MISC</td>
-            <td align="left" class="subheadings">Colors</td>
-            {% for row in table_data %}
-            <td>{{row['data34']}}</td>
-            <td>{{row['data68']}}</td>
-            {% endfor %}
-        </tr>
-    </table> 
+    </thead>
 
-{% endif %}
+    <!-- row2-->
+    <tr>
+      <td align="center" class="headings" width="10%">NETWORK</td>
+      <td align="left" class="subheadings">Technology</td>
+      {% for row in table_data %}
+      <td>{{row['data2']}}</td>
+      <td>{{row['data36']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row3-->
+    <tr>
+      <td rowspan="2" align="center" class="headings" width="10%">LAUNCH</td>
+      <td align="left" class="subheadings" width="10%">Announced</td>
+      {% for row in table_data %}
+      <td>{{row['data3']}}</td>
+      <td>{{row['data37']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Status</td>
+      {% for row in table_data %}
+      <td>{{row['data4']}}</td>
+      <td>{{row['data38']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row4-->
+    <tr> 
+      <td rowspan="4" align="center" class="headings" width="10%">BODY</td>
+      <td align="left" class="subheadings" width="10%">Dimensions</td>
+      {% for row in table_data %}
+      <td>{{row['data5']}}</td>
+      <td>{{row['data39']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Weight</td>
+      {% for row in table_data %}
+      <td>{{row['data6']}}</td>
+      <td>{{row['data40']}}</td>
+      {% endfor %}
+    </tr>
+     <tr>
+      <td align="left" class="subheadings" width="10%">Build</td>
+      {% for row in table_data %}
+      <td>{{row['data69']}}</td>
+      <td>{{row['data70']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">SIM</td>
+      {% for row in table_data %}
+      <td>{{row['data7']}}</td>
+      <td>{{row['data41']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row5-->
+    <tr>
+      <td rowspan="3" align="center" class="headings" width="10%">DISPLAY</td>
+      <td align="left" class="subheadings" width="10%">Type</td>
+      {% for row in table_data %}
+      <td>{{row['data8']}}</td>
+      <td>{{row['data42']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Size</td>
+      {% for row in table_data %}
+      <td>{{row['data9']}}</td>
+      <td>{{row['data43']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Resolution</td>
+      {% for row in table_data %}
+      <td>{{row['data10']}}</td>
+      <td>{{row['data44']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row6-->
+    <tr> 
+      <td rowspan="4" align="center" class="headings" width="10%">PLATFORM</td>
+      <td align="left" class="subheadings" width="10%">OS</td>
+      {% for row in table_data %}
+      <td>{{row['data11']}}</td>
+      <td>{{row['data45']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">ChipSet</td>
+      {% for row in table_data %}
+      <td>{{row['data12']}}</td>
+      <td>{{row['data46']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">CPU</td>
+      {% for row in table_data %}
+      <td>{{row['data13']}}</td>
+      <td>{{row['data47']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">GPU</td>
+      {% for row in table_data %}
+      <td>{{row['data14']}}</td>
+      <td>{{row['data48']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row7-->
+    <tr>
+      <td rowspan="2" align="center" class="headings" width="10%">MEMORY</td>
+      <td align="left" class="subheadings" width="10%">Card slot</td>
+      {% for row in table_data %}
+      <td>{{row['data15']}}</td>
+      <td>{{row['data49']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Internal</td>
+      {% for row in table_data %}
+      <td>{{row['data16']}}</td>
+      <td>{{row['data50']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row8-->
+    <tr>
+      <td rowspan="3" align="center" class="headings" width="10%">MAIN<br>CAMERA</td>
+      <td align="left" class="subheadings" width="10%">Single</td>
+      {% for row in table_data %}
+      <td>{{row['data17']}}</td>
+      <td>{{row['data51']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Features</td>
+      {% for row in table_data %}
+      <td>{{row['data18']}}</td>
+      <td>{{row['data52']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Video</td>
+      {% for row in table_data %}
+      <td>{{row['data19']}}</td>
+      <td>{{row['data53']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row9-->
+    <tr>
+      <td rowspan="3" align="center" class="headings" width="10%">SELFIE<br>CAMERA</td>
+      <td align="left" class="subheadings" width="10%">Single</td>
+      {% for row in table_data %}
+      <td>{{row['data20']}}</td>
+      <td>{{row['data54']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Features</td>
+      {% for row in table_data %}
+      <td>{{row['data21']}}</td>
+      <td>{{row['data55']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Video</td>
+      {% for row in table_data %}
+      <td>{{row['data22']}}</td>
+      <td>{{row['data56']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row10-->
+     <tr>
+      <td rowspan="2" align="center" class="headings" width="10%">SOUND</td>
+      <td align="left" class="subheadings" width="10%">LoudSpeaker</td>
+      {% for row in table_data %}
+      <td>{{row['data23']}}</td>
+      <td>{{row['data57']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">3.5mm jack</td>
+      {% for row in table_data %}
+      <td>{{row['data24']}}</td>
+      <td>{{row['data58']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row11-->
+    <tr>
+      <td rowspan="6" align="center" class="headings" width="10%">COMMS</td>
+      <td align="left" class="subheadings" width="10%">WLAN</td>
+      {% for row in table_data %}
+      <td>{{row['data25']}}</td>
+      <td>{{row['data59']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Blutooth</td>
+      {% for row in table_data %}
+      <td>{{row['data26']}}</td>
+      <td>{{row['data60']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Positioning</td>
+      {% for row in table_data %}
+      <td>{{row['data27']}}</td>
+      <td>{{row['data61']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">NFC</td>
+      {% for row in table_data %}
+      <td>{{row['data28']}}</td>
+      <td>{{row['data62']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Radio</td>
+      {% for row in table_data %}
+      <td>{{row['data29']}}</td>
+      <td>{{row['data63']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">USB</td>
+      {% for row in table_data %}
+      <td>{{row['data30']}}</td>
+      <td>{{row['data64']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row12-->
+    <tr>
+      <td align="center" class="headings" width="10%">FEATURES</td>
+      <td align="left" class="subheadings" width="10%">Sensors</td>
+      {% for row in table_data %}
+      <td>{{row['data31']}}</td>
+      <td>{{row['data65']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row13-->
+    <tr>
+      <td rowspan="2" align="center" class="headings" width="10%">BATTERY</td>
+      <td align="left" class="subheadings" width="10%">Type</td>
+      {% for row in table_data %}
+      <td>{{row['data32']}}</td>
+      <td>{{row['data66']}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td align="left" class="subheadings" width="10%">Charging</td>
+      {% for row in table_data %}
+      <td>{{row['data33']}}</td>
+      <td>{{row['data67']}}</td>
+      {% endfor %}
+    </tr>
+
+    <!-- row14-->
+    <tr>
+      <td align="center" class="headings" width="10%">MISC</td>
+      <td align="left" class="subheadings" width="10%">Colors</td>
+      {% for row in table_data %}
+      <td>{{row['data34']}}</td>
+      <td>{{row['data68']}}</td>
+      {% endfor %}
+    </tr>
+
+  </table>
+  {% endif %}
     
   
 
