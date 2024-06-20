@@ -43,3 +43,16 @@ input[type="text"]{
             color:rgba(68, 67, 67, 0.895);
             font-size: 20px;
             }
+.loader{
+    border: 16px dotted #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    display:none;
+    margin: auto;
+}
+@keyframes spin{
+    0%{transform: rotate(odeg);}
+    100%{transform: rotate(360deg);}
+}
