@@ -55,7 +55,17 @@
             </td>
     </thead>
 
-    <!-- row2-->
+    <!--row2-->
+    <tr>
+      <td align="center" class="headings" width="10%">MOBILE</td>
+      <td align="left" class="subheadings">Image</td>
+      {% for row in table_data %}
+      <td align="center"><img src="{{row['data71']}}"></td>
+      <td align="center"><img src="{{row['data72']}}"></td>
+      {% endfor %}
+    </tr>
+    
+    <!-- row3-->
     <tr>
       <td align="center" class="headings" width="10%">NETWORK</td>
       <td align="left" class="subheadings">Technology</td>
@@ -65,7 +75,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row3-->
+    <!-- row4-->
     <tr>
       <td rowspan="2" align="center" class="headings" width="10%">LAUNCH</td>
       <td align="left" class="subheadings" width="10%">Announced</td>
@@ -82,7 +92,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row4-->
+    <!-- row5-->
     <tr> 
       <td rowspan="4" align="center" class="headings" width="10%">BODY</td>
       <td align="left" class="subheadings" width="10%">Dimensions</td>
@@ -113,7 +123,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row5-->
+    <!-- row6-->
     <tr>
       <td rowspan="3" align="center" class="headings" width="10%">DISPLAY</td>
       <td align="left" class="subheadings" width="10%">Type</td>
@@ -137,7 +147,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row6-->
+    <!-- row7-->
     <tr> 
       <td rowspan="4" align="center" class="headings" width="10%">PLATFORM</td>
       <td align="left" class="subheadings" width="10%">OS</td>
@@ -168,7 +178,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row7-->
+    <!-- row8-->
     <tr>
       <td rowspan="2" align="center" class="headings" width="10%">MEMORY</td>
       <td align="left" class="subheadings" width="10%">Card slot</td>
@@ -185,7 +195,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row8-->
+    <!-- row9-->
     <tr>
       <td rowspan="3" align="center" class="headings" width="10%">MAIN<br>CAMERA</td>
       <td align="left" class="subheadings" width="10%">Single</td>
@@ -209,7 +219,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row9-->
+    <!-- row10-->
     <tr>
       <td rowspan="3" align="center" class="headings" width="10%">SELFIE<br>CAMERA</td>
       <td align="left" class="subheadings" width="10%">Single</td>
@@ -233,7 +243,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row10-->
+    <!-- row11-->
      <tr>
       <td rowspan="2" align="center" class="headings" width="10%">SOUND</td>
       <td align="left" class="subheadings" width="10%">LoudSpeaker</td>
@@ -250,7 +260,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row11-->
+    <!-- row12-->
     <tr>
       <td rowspan="6" align="center" class="headings" width="10%">COMMS</td>
       <td align="left" class="subheadings" width="10%">WLAN</td>
@@ -295,7 +305,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row12-->
+    <!-- row13-->
     <tr>
       <td align="center" class="headings" width="10%">FEATURES</td>
       <td align="left" class="subheadings" width="10%">Sensors</td>
@@ -305,7 +315,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row13-->
+    <!-- row14-->
     <tr>
       <td rowspan="2" align="center" class="headings" width="10%">BATTERY</td>
       <td align="left" class="subheadings" width="10%">Type</td>
@@ -322,7 +332,7 @@
       {% endfor %}
     </tr>
 
-    <!-- row14-->
+    <!-- row15-->
     <tr>
       <td align="center" class="headings" width="10%">MISC</td>
       <td align="left" class="subheadings" width="10%">Colors</td>
