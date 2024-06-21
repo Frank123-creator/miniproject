@@ -1,4 +1,5 @@
 function fetchData(){
+    document.getElementById('error-message').style.display='none';
     document.getElementById('loader').style.display='block';
     document.getElementById('content').style.display='block';
     document.getElementById('result').innerText='';
