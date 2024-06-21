@@ -29,7 +29,9 @@ def search(search_query):
 
     # Wait for the results to load and display the titles
     driver.implicitly_wait(5)  # You can increase this if your internet is slow
-    
+
+    img_element=driver.find_element(By.XPATH,"""//*[@id="body"]/div/div[1]/div/div[2]/div/a/img""")
+    img_url=img_element.get_attribute('src')
 
     products = driver.find_elements(By.XPATH, """//*[@id="body"]/div/div[1]/div/div[1]/h1""")
     product_names=[b.text for b in products[:1]]
@@ -205,6 +207,6 @@ def search(search_query):
 
     driver.quit()
 
-    return product[0],technology[0],announced[0],status[0],dimension[0],weight[0],sim[0],t_ype[0],size[0],resolution[0],os[0],chipset[0],cpu[0],gpu[0],cardslot[0],internal[0],single[0],features[0],video[0],sin_gle[0],feat_ures[0],v_ideo[0],loudspeaker[0],jack[0],wlan[0],blutooth[0],positioning[0],nfc[0],radio[0],usb[0],sensors[0],ty_pe[0],charging[0],colors[0]
+    return product[0],technology[0],announced[0],status[0],dimension[0],weight[0],sim[0],t_ype[0],size[0],resolution[0],os[0],chipset[0],cpu[0],gpu[0],cardslot[0],internal[0],single[0],features[0],video[0],sin_gle[0],feat_ures[0],v_ideo[0],loudspeaker[0],jack[0],wlan[0],blutooth[0],positioning[0],nfc[0],radio[0],usb[0],sensors[0],ty_pe[0],charging[0],colors[0],img_url
 
 
